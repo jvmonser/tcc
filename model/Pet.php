@@ -3,77 +3,86 @@
 class Pet {
 
     //atributos
-    private $id;
+    private $idade;
     private $nome;
-    private $especie;
+    private $peso;
     private $raça;
+    private $dono;
 
     //gets e sets
-    public function getId() {
-        return $this->id;
+    public function getIdade() {
+        return $this->idade;
     }
 
     public function getNome() {
         return $this->nome;
     }
 
-    public function getEspecie() {
-        return $this->especie;
+    public function getPeso() {
+        return $this->peso;
     }
 
     public function getRaça() {
         return $this->raça;
     }
+    
+    public function getDono() {
+        return $this->dono;
+    }
 
-    public function setId($id): void {
-        $this->id = $id;
+    public function setIdade($idade): void {
+        $this->idade = $idade;
     }
 
     public function setNome($nome): void {
         $this->nome = $nome;
     }
 
-    public function setEspecie($especie): void {
-        $this->especie = $especie;
+    public function setPeso($peso): void {
+        $this->peso = $peso;
     }
 
       public function setRaça($raça): void {
         $this->raça = $raça;
+    }
+    
+    public function setDono($dono): void {
+        $this->dono = $dono;
     }
 
     //metodos do CRUD
     #consultar
     public function consultar() {
 
-        $sql = "SELECT `id`, `nome`, `especie`, 'raça' FROM `tb_pet`";
+        $sql = "SELECT `idade`, `nome`, `peso`, 'raça' ,'dono' FROM `tb_pet`";
 
         return $array;
     }
 
     #inserir
 
-    public function inserir($nome, $especie) {
+    public function inserir($nome, $peso) {
 
-        $sql = "INSERT INTO `tb_pet`(`nome`, `especie`,'raça') VALUES ($nome,$especie,$raça)";
+        $sql = "INSERT INTO `tb_pet`(`nome`, `peso` ,'raça') VALUES ($nome,$peso,$raça)";
 
         return true;
     }
 
     #alterar
 
-    public function alterar($id, $especie, $raça) {
+    public function alterar($idade, $peso, $raça) {
 
 
-        $sql = "UPDATE `tb_pet` SET `especie`=$especie WHERE id=$id";
+        $sql = "UPDATE `tb_pet` SET `especie`=$peso WHERE idade=$idade";
 
         return true;
     }
 
     #excluir
 
-    public function excluir($id) {
+    public function excluir($idade) {
 
-        $sql = "DELETE FROM `tb_pet` WHERE id=$id";
+        $sql = "DELETE FROM `tb_pet` WHERE idade=$idade";
 
         return true;
     }

@@ -1,6 +1,6 @@
 <?php
 
-class Cliente {
+class Funcionário {
 
     //atributos
     private $id;
@@ -11,7 +11,6 @@ class Cliente {
     private $dtnascimento;
     private $telefone;
     private $email;
-    private $pet;
 
     //gets e sets
     public function getId() {
@@ -46,9 +45,6 @@ class Cliente {
         return $this->email;
     }
     
-    public function getPet() {
-        return $this->pet;
-    }
 
     public function setId($id): void {
         $this->id = $id;
@@ -82,34 +78,31 @@ class Cliente {
         $this->email = $email;
     }
     
-    public function setPet($pet): void {
-        $this->pet = $pet;
-    }
 
     //metodos do CRUD
     #consultar
     public function consultar() {
 
-        $sql = "SELECT `id`, `nome`, `cpf` FROM `tb_cliente`";
+        $sql = "SELECT `id`, `email`, `senha` FROM `tb_login`";
 
         return $array;
     }
 
     #inserir
 
-    public function inserir($nome, $cpf) {
+    public function inserir($email, $senha) {
 
-        $sql = "INSERT INTO `tb_cliente`(`nome`, `cpf`) VALUES ($nome,$cpf)";
+        $sql = "INSERT INTO `tb_login`(`email`, `senha`) VALUES ($email,$senha)";
 
         return true;
     }
 
     #alterar
 
-    public function alterar($id, $cpf) {
+    public function alterar($id, $senha) {
 
 
-        $sql = "UPDATE `tb_cliente` SET `cpf`=$cpf WHERE id=$id";
+        $sql = "UPDATE `tb_login` SET `senha`=$senha WHERE id=$id";
 
         return true;
     }
@@ -118,7 +111,7 @@ class Cliente {
 
     public function excluir($id) {
 
-        $sql = "DELETE FROM `tb_cliente` WHERE id=$id";
+        $sql = "DELETE FROM `tb_login` WHERE id=$id";
 
         return true;
     }

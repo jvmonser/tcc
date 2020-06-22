@@ -3,59 +3,50 @@
 class Usuario {
 
     //atributos
-    private $id;
-    private $nome;
-    private $cpf;
+    private $id;    
+    private $senha;
 
     //gets e sets
     public function getId() {
         return $this->id;
     }
 
-    public function getNome() {
-        return $this->nome;
-    }
-
-    public function getCpf() {
-        return $this->cpf;
+    public function getSenha() {
+        return $this->senha;
     }
 
     public function setId($id): void {
         $this->id = $id;
     }
 
-    public function setNome($nome): void {
-        $this->nome = $nome;
-    }
-
-    public function setCpf($cpf): void {
-        $this->cpf = $cpf;
+    public function setSenha($senha): void {
+        $this->senha = $senha;
     }
 
     //metodos do CRUD
     #consultar
     public function consultar() {
 
-        $sql = "SELECT `id`, `nome`, `cpf` FROM `tb_cliente`";
+        $sql = "SELECT `id`, `senha` FROM `tb_cliente`";
 
         return $array;
     }
 
     #inserir
 
-    public function inserir($nome, $cpf) {
+    public function inserir($id, $senha) {
 
-        $sql = "INSERT INTO `tb_usuario`(`nome`, `cpf`) VALUES ($nome,$cpf)";
+        $sql = "INSERT INTO `tb_usuario`(`id`, `senha`) VALUES ($nome,$cpf)";
 
         return true;
     }
 
     #alterar
 
-    public function alterar($id, $cpf) {
+    public function alterar($id, $senha) {
 
 
-        $sql = "UPDATE `tb_usuario` SET `cpf`=$cpf WHERE id=$id";
+        $sql = "UPDATE `tb_usuario` SET `senha`=$senha WHERE id=$id";
 
         return true;
     }
