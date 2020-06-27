@@ -78,19 +78,11 @@ class Funcionario {
     }
 
     //metodos do CRUD
-    #consultar
-    public function consultar() {
-
-        $sql = "SELECT `id`, `email`, `senha` FROM `tb_login`";
-
-        return $array;
-    }
-
     #inserir
 
     public function inserir($email, $senha) {
 
-        $sql = "INSERT INTO `tb_login`(`email`, `senha`) VALUES ($email,$senha)";
+        $sql = "INSERT INTO `Funcionario`(`email`, `senha`) VALUES ($email,$senha)";
 
         return true;
     }
@@ -100,16 +92,24 @@ class Funcionario {
     public function alterar($id, $senha) {
 
 
-        $sql = "UPDATE `tb_login` SET `senha`=$senha WHERE id=$id";
+        $sql = "UPDATE `Funcionario` SET `senha`=$senha WHERE id=$id";
 
         return true;
     }
 
+    #consultar
+    public function consultar() {
+
+        $sql = "SELECT `id`, `email`, `senha` FROM `Funcionario`";
+
+        return $array;
+    }
+    
     #excluir
 
     public function excluir($id) {
 
-        $sql = "DELETE FROM `tb_login` WHERE id=$id";
+        $sql = "DELETE FROM `Funcionario` WHERE id=$id";
 
         return true;
     }

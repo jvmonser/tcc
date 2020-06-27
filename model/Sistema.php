@@ -27,7 +27,7 @@ class Sistema {
     #consultar
     public function consultar() {
 
-        $sql = "SELECT `consultarusuario`, `servicos` FROM `tb_cliente`";
+        $sql = "SELECT `consultarusuarios`, `servicos` FROM `Sistema`";
 
         return $array;
     }
@@ -36,7 +36,7 @@ class Sistema {
 
     public function inserir($consultar, $servicos) {
 
-        $sql = "INSERT INTO `tb_usuario`(`consultarusuario`, `servicos`) VALUES ($consultar,$servicos)";
+        $sql = "INSERT INTO `Sistema`(`consultarusuarios`, `servicos`) VALUES ($consultar,$servicos)";
 
         return true;
     }
@@ -46,7 +46,7 @@ class Sistema {
     public function alterar($consultar, $servicos) {
 
 
-        $sql = "UPDATE `tb_usuario` SET `servicos`=$servicos WHERE consultarusuario=$consultar";
+        $sql = "UPDATE `sistema` SET `servicos`=$servicos WHERE consultarusuarios=$consultar";
 
         return true;
     }
@@ -55,7 +55,7 @@ class Sistema {
 
     public function excluir($consultar) {
 
-        $sql = "DELETE FROM `tb_usuario` WHERE consultar=$consultar";
+        $sql = "DELETE FROM `sistema` WHERE consultar=$consultar";
 
         return true;
     }

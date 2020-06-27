@@ -51,19 +51,11 @@ class Pet {
     }
 
     //metodos do CRUD
-    #consultar
-    public function consultar() {
-
-        $sql = "SELECT `idade`, `nome`, `peso`, 'raca' ,'dono' FROM `tb_pet`";
-
-        return $array;
-    }
-
     #inserir
 
     public function inserir($nome, $peso) {
 
-        $sql = "INSERT INTO `tb_pet`(`nome`, `peso` ,'raca') VALUES ($nome,$peso,$raca)";
+        $sql = "INSERT INTO `pet`(`nome`, `peso` ,'raca') VALUES ($nome,$peso,$raca)";
 
         return true;
     }
@@ -73,16 +65,16 @@ class Pet {
     public function alterar($idade, $peso, $raca) {
 
 
-        $sql = "UPDATE `tb_pet` SET `especie`=$peso WHERE idade=$idade";
+        $sql = "UPDATE `pet` SET `especie`=$peso WHERE idade=$idade";
 
         return true;
     }
-
+ 
     #excluir
 
     public function excluir($idade) {
 
-        $sql = "DELETE FROM `tb_pet` WHERE idade=$idade";
+        $sql = "DELETE FROM `pet` WHERE idade=$idade";
 
         return true;
     }

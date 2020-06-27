@@ -27,7 +27,7 @@ class Usuario {
     #consultar
     public function consultar() {
 
-        $sql = "SELECT `id`, `senha` FROM `tb_cliente`";
+        $sql = "SELECT `id`, `senha` FROM `usuario`";
 
         return $array;
     }
@@ -36,7 +36,7 @@ class Usuario {
 
     public function inserir($id, $senha) {
 
-        $sql = "INSERT INTO `tb_usuario`(`id`, `senha`) VALUES ($nome,$cpf)";
+        $sql = "INSERT INTO `usurio`(`id`, `senha`) VALUES ($nome,$cpf)";
 
         return true;
     }
@@ -46,7 +46,7 @@ class Usuario {
     public function alterar($id, $senha) {
 
 
-        $sql = "UPDATE `tb_usuario` SET `senha`=$senha WHERE id=$id";
+        $sql = "UPDATE `usuario` SET `senha`=$senha WHERE id=$id";
 
         return true;
     }
@@ -55,7 +55,7 @@ class Usuario {
 
     public function excluir($id) {
 
-        $sql = "DELETE FROM `tb_usuario` WHERE id=$id";
+        $sql = "DELETE FROM `usuario` WHERE id=$id";
 
         return true;
     }

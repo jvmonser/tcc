@@ -87,19 +87,11 @@ class Cliente {
     }
 
     //metodos do CRUD
-    #consultar
-    public function consultar() {
-
-        $sql = "SELECT `id`, `nome`, `cpf` FROM `tb_cliente`";
-
-        return $array;
-    }
-
     #inserir
 
     public function inserir($nome, $cpf) {
 
-        $sql = "INSERT INTO `tb_cliente`(`nome`, `cpf`) VALUES ($nome,$cpf)";
+        $sql = "INSERT INTO `cliente`(`nome`, `cpf`) VALUES ($nome,$cpf)";
 
         return true;
     }
@@ -109,16 +101,23 @@ class Cliente {
     public function alterar($id, $cpf) {
 
 
-        $sql = "UPDATE `tb_cliente` SET `cpf`=$cpf WHERE id=$id";
+        $sql = "UPDATE `cliente` SET `cpf`=$cpf WHERE id=$id";
 
         return true;
+    }
+    #Consulta
+ public function consultar() {
+
+        $sql = "SELECT `id`, `nome`, `cpf` FROM `tb_cliente`";
+
+        return $array;
     }
 
     #excluir
 
     public function excluir($id) {
 
-        $sql = "DELETE FROM `tb_cliente` WHERE id=$id";
+        $sql = "DELETE FROM `cliente` WHERE id=$id";
 
         return true;
     }
