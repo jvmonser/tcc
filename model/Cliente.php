@@ -7,7 +7,7 @@ class Cliente {
     private $nome;
     private $cpf;
     private $senha;
-    private $endereço;
+    private $endereco;
     private $dtnascimento;
     private $telefone;
     private $email;
@@ -25,27 +25,27 @@ class Cliente {
     public function getCpf() {
         return $this->cpf;
     }
-    
+
     public function getSenha() {
         return $this->senha;
     }
-    
-    public function getEndereço() {
-        return $this->endereço;
+
+    public function getEndereco() {
+        return $this->endereco;
     }
-    
+
     public function getDtnascimento() {
         return $this->dtnascimento;
     }
-    
+
     public function getTelefone() {
         return $this->telefone;
     }
-    
+
     public function getEmail() {
         return $this->email;
     }
-    
+
     public function getPet() {
         return $this->pet;
     }
@@ -61,27 +61,27 @@ class Cliente {
     public function setCpf($cpf): void {
         $this->cpf = $cpf;
     }
-    
+
     public function setSenha($senha): void {
         $this->senha = $senha;
     }
-    
-    public function setEndereço($endereço): void {
-        $this->endereço = $endereço;
+
+    public function setEndereco($endereco): void {
+        $this->endereco = $endereco;
     }
-    
+
     public function setDtnascimento($dtnascimento): void {
         $this->dtnascimento = $dtnascimento;
     }
-    
+
     public function setTelefone($telefone): void {
         $this->telefone = $telefone;
     }
-    
+
     public function setEmail($email): void {
         $this->email = $email;
     }
-    
+
     public function setPet($pet): void {
         $this->pet = $pet;
     }

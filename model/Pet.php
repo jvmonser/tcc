@@ -6,7 +6,7 @@ class Pet {
     private $idade;
     private $nome;
     private $peso;
-    private $raça;
+    private $raca;
     private $dono;
 
     //gets e sets
@@ -22,10 +22,10 @@ class Pet {
         return $this->peso;
     }
 
-    public function getRaça() {
-        return $this->raça;
+    public function getRaca() {
+        return $this->raca;
     }
-    
+
     public function getDono() {
         return $this->dono;
     }
@@ -42,10 +42,10 @@ class Pet {
         $this->peso = $peso;
     }
 
-      public function setRaça($raça): void {
-        $this->raça = $raça;
+    public function setRaca($raca): void {
+        $this->raca = $raca;
     }
-    
+
     public function setDono($dono): void {
         $this->dono = $dono;
     }
@@ -54,7 +54,7 @@ class Pet {
     #consultar
     public function consultar() {
 
-        $sql = "SELECT `idade`, `nome`, `peso`, 'raça' ,'dono' FROM `tb_pet`";
+        $sql = "SELECT `idade`, `nome`, `peso`, 'raca' ,'dono' FROM `tb_pet`";
 
         return $array;
     }
@@ -63,14 +63,14 @@ class Pet {
 
     public function inserir($nome, $peso) {
 
-        $sql = "INSERT INTO `tb_pet`(`nome`, `peso` ,'raça') VALUES ($nome,$peso,$raça)";
+        $sql = "INSERT INTO `tb_pet`(`nome`, `peso` ,'raca') VALUES ($nome,$peso,$raca)";
 
         return true;
     }
 
     #alterar
 
-    public function alterar($idade, $peso, $raça) {
+    public function alterar($idade, $peso, $raca) {
 
 
         $sql = "UPDATE `tb_pet` SET `especie`=$peso WHERE idade=$idade";
